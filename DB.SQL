@@ -1,41 +1,41 @@
 CREATE TABLE boats (
-name varchar(30) NOT NULL PRIMARY KEY,
-rating real NOT NULL,
-LOA real NOT NULL
+    name varchar(30) NOT NULL PRIMARY KEY,
+    rating real NOT NULL,
+    LOA real NOT NULL
 );
 
 CREATE TABLE races (
-name varchar(50) NOT NULL PRIMARY KEY,
-start_time date NOT NULL,
-max_length integer NOT NULL,
-min_length integer NOT NULL,
-location varchar(50) NOT NULL,
-time_limit real NOT NULL
+    name varchar(50) NOT NULL PRIMARY KEY,
+    start_time date NOT NULL,
+    max_length integer NOT NULL,
+    min_length integer NOT NULL,
+    location varchar(50) NOT NULL,
+    time_limit real NOT NULL
 );
 
 CREATE TABLE registration (
-ID varchar(30) NOT NULL PRIMARY KEY,
-participants integer NOT NULL
+    ID varchar(30) NOT NULL PRIMARY KEY,
+    participants integer NOT NULL
 );
 
 CREATE TABLE race_locations (
-ID varchar(30) NOT NULL PRIMARY KEY,
-start_location varchar(50) NOT NULL,
-finish_location varchar(50) NOT NULL
+    ID varchar(30) NOT NULL PRIMARY KEY,
+    start_location varchar(50) NOT NULL,
+    finish_location varchar(50) NOT NULL
 );
 
 CREATE TABLE results (
-ID varchar(30) NOT NULL PRIMARY KEY,
-place int NOT NULL,
-past_results int NOT NULL,
-finish_time real NOT NULL
+    ID varchar(30) NOT NULL PRIMARY KEY,
+    place int NOT NULL,
+    past_results int NOT NULL,
+    finish_time real NOT NULL
 );
 
 CREATE TABLE records (
-ID varchar(30) NOT NULL PRIMARY KEY,
-time real NOT NULL,
-place integer NOT NULL,
-winner varchar(30) NOT NULL
+    ID varchar(30) NOT NULL PRIMARY KEY,
+    time real NOT NULL,
+    place integer NOT NULL,
+    winner varchar(30) NOT NULL
 );
 
 \copy boats FROM 'DBboats.tsv';
